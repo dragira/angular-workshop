@@ -1,0 +1,26 @@
+<div class="content-container">
+  <div class="list-container">
+    <div class="container">
+      <div class="title">
+        <p>Heroes</p>
+      </div>
+      <div class="content">
+        <ul class="heroes">
+          <li *ngFor="let hero of heroes"
+            class="item-container"
+            [class.selected]="hero === selectedHero"
+            (click)="selectHero(hero)">
+            <div class="badge">{{ hero.id }}</div>
+            <div class="item-text">
+              <div class="name">{{ hero.name }}</div>
+              <div class="weapon">{{ hero.weapon }}</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="detail-container">
+    <app-hero-detail *ngIf="selectedHero" [hero]="selectedHero"></app-hero-detail>
+  </div>
+</div>
