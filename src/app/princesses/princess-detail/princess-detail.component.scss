@@ -2,4 +2,8 @@
 
 .container {
   @include detail-container-layout;
+
+  .title {
+    background: #fc99cc;
+  }
 }

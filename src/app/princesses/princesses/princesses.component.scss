@@ -2,12 +2,16 @@
 
 .content-container {
   @include content-container-layout;
+
+  .container .title {
+    background: #fc99cc;
+  }
 }
 
 .name {
-  color: #235ebc;
+  color: #f943a1;
 }
 
-.weapon {
+.hair {
   font-size: 14px;
 }

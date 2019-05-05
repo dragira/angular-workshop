@@ -1,0 +1,61 @@
+@mixin content-container-layout {
+  display: flex;
+
+  .list-container {
+    width: 400px;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .container {
+    @include detail-container-layout;
+  }
+
+  .detail-container {
+    width: 300px;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .item-container {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    background: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    &.selected {
+      background: #ccc;
+    }
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 1rem;
+  }
+}
+
+@mixin detail-container-layout {
+  border: 1px solid #ccc;
+
+  .title {
+    background: #90b9f9;
+    padding: 0.1rem 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .item-text {
+    margin: 1rem 0;
+  }
+
+}
