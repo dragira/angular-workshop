@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Hero } from '../core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HeroesService {
-  heroes = [
+  heroes: Hero[] = [
     {
       id: 1,
       name: 'Dumbledore',
@@ -27,7 +28,7 @@ export class HeroesService {
 
   constructor() { }
 
-  getHeroes() {
+  getHeroes(): Hero[] {
     return this.heroes;
   }
 }

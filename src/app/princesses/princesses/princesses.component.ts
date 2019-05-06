@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Princess } from 'src/app/core';
 import { PrincessesService } from '../princesses.service';
 
 @Component({
@@ -7,8 +8,8 @@ import { PrincessesService } from '../princesses.service';
   styleUrls: ['./princesses.component.scss']
 })
 export class PrincessesComponent implements OnInit {
-  princesses;
-  selectedPrincess;
+  princesses: Princess[];
+  selectedPrincess: Princess;
 
   constructor(private princessesService: PrincessesService) {}
 
@@ -20,7 +21,7 @@ export class PrincessesComponent implements OnInit {
     this.princesses = this.princessesService.getPrincesses();
   }
 
-  selectPrincess(princess) {
+  selectPrincess(princess: Princess) {
     this.selectedPrincess = princess;
   }
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Princess } from 'src/app/core';
 
 @Component({
   selector: 'app-princess-detail',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./princess-detail.component.scss']
 })
 export class PrincessDetailComponent implements OnInit {
-  @Input() princess;
+  @Input() princess: Princess;
 
   constructor() { }
 
