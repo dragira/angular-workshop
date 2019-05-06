@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PrincessesService } from '../princesses.service';
 
 @Component({
   selector: 'app-princesses',
@@ -6,32 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./princesses.component.scss']
 })
 export class PrincessesComponent implements OnInit {
-  princesses = [
-    {
-      id: 1,
-      name: 'Rapunzel',
-      favoriteColor: 'Rose',
-      hair: 'Blond'
-    },
-    {
-      id: 2,
-      name: 'Ariel',
-      favoriteColor: 'Green',
-      hair: 'Red'
-    },
-    {
-      id: 3,
-      name: 'Snow White',
-      favoriteColor: 'Blue',
-      hair: 'Black'
-    }
-  ];
-
+  princesses;
   selectedPrincess;
 
-  constructor() {}
+  constructor(private princessesService: PrincessesService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getPrincesses();
+  }
+
+  getPrincesses() {
+    this.princesses = this.princessesService.getPrincesses();
+  }
 
   selectPrincess(princess) {
     this.selectedPrincess = princess;

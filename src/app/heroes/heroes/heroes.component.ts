@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroesService } from '../heroes.service';
 
 @Component({
   selector: 'app-heroes',
@@ -6,32 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
-  heroes = [
-    {
-      id: 1,
-      name: 'Dumbledore',
-      weapon: 'Wand',
-      beard: 'Long beard'
-    },
-    {
-      id: 2,
-      name: 'Sauron',
-      weapon: 'Ring',
-      beard: 'No beard'
-    },
-    {
-      id: 3,
-      name: 'Gandalf',
-      weapon: 'Sword',
-      beard: 'Long beard'
-    }
-  ];
-
+  heroes;
   selectedHero;
 
-  constructor() {}
+  constructor(private heroesService: HeroesService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getHeroes();
+  }
+
+  getHeroes() {
+    this.heroes = this.heroesService.getHeroes();
+  }
 
   selectHero(hero) {
     this.selectedHero = hero;
