@@ -1,0 +1,13 @@
+.nav {
+  text-align: center;
+  margin: 10px 0;
+
+  a {
+    padding: 10px 15px;
+    color: inherit;
+
+    &.router-link-active {
+      background: #eee;
+    }
+  }
+}

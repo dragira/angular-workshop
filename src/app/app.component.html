@@ -1,11 +1,15 @@
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Heroes tour" src="assets/images/heroes.jpg">
-  </div>
+  <h1>Welcome to {{ title }}!</h1>
+  <img width="300" alt="Heroes tour" src="assets/images/heroes.jpg" />
+</div>
+
+<div class="nav">
+  <a [routerLink]="['/heroes']" routerLinkActive="router-link-active">
+    <span>Heroes</span>
+  </a>
+  <a [routerLink]="['/princesses']" routerLinkActive="router-link-active">
+    <span>Princesses</span>
+  </a>
+</div>
 
 <router-outlet></router-outlet>
-
-<app-heroes></app-heroes>
-<app-princesses></app-princesses>
