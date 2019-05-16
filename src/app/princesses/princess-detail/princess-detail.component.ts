@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Princess } from 'src/app/core';
+import { Princess } from '../../core';
 
 @Component({
   selector: 'app-princess-detail',
