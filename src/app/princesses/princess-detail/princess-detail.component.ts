@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Princess } from 'src/app/core';
+// import { Princess } from '../../core';
 
 @Component({
   selector: 'app-princess-detail',
@@ -7,7 +7,10 @@ import { Princess } from 'src/app/core';
   styleUrls: ['./princess-detail.component.scss']
 })
 export class PrincessDetailComponent implements OnInit {
-  @Input() princess: Princess;
+  // 6. Add class to princess (uncomment and replace)
+
+  @Input() princess;
+  // @Input() princess: Princess;
 
   constructor() { }
 
