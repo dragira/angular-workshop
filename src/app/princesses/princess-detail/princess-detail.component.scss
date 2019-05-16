@@ -1,9 +1,0 @@
-@import '../../../assets/styles/mixins';
-
-.container {
-  @include detail-container-layout;
-
-  .title {
-    background: #fc99cc;
-  }
-}
